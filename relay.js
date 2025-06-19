@@ -1,9 +1,10 @@
 const WebSocket = require('ws');
 
+// 🔥 Render에서 제공하는 포트 환경변수 사용
 const PORT = process.env.PORT || 10000;
 
 const server = new WebSocket.Server({ port: PORT }, () => {
-  console.log(`✅ WebSocket server running on port ${PORT}`);  
+  console.log(`✅ WebSocket server running on port ${PORT}`);
 });
 
 let pcSocket = null;
